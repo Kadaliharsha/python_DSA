@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Python with redirected input/output (cmd)",
+      "type": "shell",
+      "command": "cmd.exe",
+      "args": [
+        "/c",
+        "python main.py < input.txt > output.txt",
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"  // This ensures it runs from your folder
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
