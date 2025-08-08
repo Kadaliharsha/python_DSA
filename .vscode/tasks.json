@@ -2,15 +2,15 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Run Python with redirected input/output (cmd)",
+      "label": "Run Python with redirected input/output (choose file)",
       "type": "shell",
       "command": "cmd.exe",
       "args": [
         "/c",
-        "python main.py < input.txt > output.txt",
+        "python ${input:pythonFile} < input.txt > output.txt"
       ],
       "options": {
-        "cwd": "${workspaceFolder}"  // This ensures it runs from your folder
+        "cwd": "${workspaceFolder}"
       },
       "group": {
         "kind": "build",
@@ -23,6 +23,14 @@
         "panel": "shared"
       },
       "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "pythonFile",
+      "type": "promptString",
+      "description": "Enter the Python filename to run (e.g., prog1.py)",
+      "default": "main.py"
     }
   ]
 }
