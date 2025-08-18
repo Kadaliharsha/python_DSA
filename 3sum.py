@@ -21,6 +21,9 @@ def threesum(arr):
             seen.add(arr[j])
     return list(char_set)
 
+    # dry run example [2,-2,0,3,-3,5]
+    
+
 
 if __name__ == "__main__":
     nums = list(map(int, input().split()))
