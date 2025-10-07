@@ -1,5 +1,7 @@
 # Largest sum cycle
 
+# The function largestsumcycle takes a list of integers 'edges' as input, where each index represents a node and the value at that index represents the next node it points to. The goal is to find the largest sum of values in any cycle present in the graph formed by these edges.
+
 def largestsumcycle(edges):
     n = len(edges) # size of the graph
     visited = [0] * n # we can consider states as 0 - unvisited, 1 - visiting, 2 - fully processed
@@ -34,12 +36,10 @@ def largestsumcycle(edges):
     
     return max_sum
 
-# correct the code or comments if any problem
-
-
 if __name__ == "__main__":
     e = list(map(int, input().split()))
     print(largestsumcycle(e))
+    
     
 # give me a script so that I can explain this in a interview
 # The function largestsumcycle takes a list of integers 'edges' as input, where each index represents a node and the value at that index represents the next node it points to. The goal is to find the largest sum of values in any cycle present in the graph formed by these edges.
